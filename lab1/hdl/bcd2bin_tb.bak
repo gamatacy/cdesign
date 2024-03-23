@@ -1,0 +1,18 @@
+`timescale 1ns / 1ps
+
+module bcd2bin_tb;
+
+	reg [7:0] bcd = 8'b10011001;
+	reg [6:0] bin;
+
+	bcd2bin dut(
+	    .bcd(bcd),
+	    .bin(bin)		
+	);
+
+	always
+	  begin
+		 bcd = 
+	  end
+
+endmodule

@@ -1,0 +1,22 @@
+`timescale 1ns / 1ps
+
+module bcd2bin_tb;
+
+	reg [7:0] bcd = 8'b10011001;
+	reg [6:0] bin;
+
+	bcd2bin dut(
+	    .bcd(bcd),
+	    .bin(bin)		
+	);
+
+	always
+	  begin
+	    if (8'b01100011 == bin) begin
+                $display("Correct! bcd=%bcd, bin=%bin", bcd, bin);
+            end else begin
+                $display("Incorrect! bcd=%bcd, bin=%bin", bcd, bin);
+            end
+	  end
+
+endmodule
